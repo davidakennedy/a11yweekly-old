@@ -1,0 +1,20 @@
+/* Base
+ *
+ * Very basic settings that apply broadly.
+ *
+ */
+html {
+	background-color: $black;
+	background: url('../../../img/road.jpg') no-repeat center center fixed;
+	background-size: cover;
+}
+
+body {
+	min-height: 100%;
+	/* Improve default text rendering, handling of kerning pairs and ligatures */
+	text-rendering:optimizeLegibility;
+}
+
+.wrapper {
+	padding: 1.25em;
+}

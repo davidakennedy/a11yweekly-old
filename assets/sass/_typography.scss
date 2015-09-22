@@ -1,0 +1,83 @@
+/* Typography */
+body,
+button,
+input,
+select,
+textarea {
+	font: #{$normal}/#{$line-height} $sans-serif;
+	color: $white;
+}
+
+/* Defaults */
+p,
+blockquote,
+q,
+pre,
+address,
+hr,
+code,
+samp,
+dl,
+ol,
+ul,
+form,
+table,
+fieldset,
+menu,
+img {
+	margin: 0 0 1.4em;
+	padding: 0;
+}
+p,
+ul,
+blockquote,
+pre,
+td,
+th,
+label {
+	margin: 0;
+	font-size: $normal;
+	line-height: 1.4;
+	margin-bottom: 1.4em;
+}
+small, p.small {
+	margin: 0;
+	font-size: $small;
+	line-height: 1.7142857142857142857142857142857;
+	margin-bottom: 1.7142857142857142857142857142857em
+}
+
+/* Headings */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	clear: both;
+	line-height: 1.1;
+	margin: 0.8em 0 0.3em 0;
+}
+
+h1 {
+	@include h1;
+}
+h2 {
+	@include h2;
+}
+h3 {
+	@include h3;
+}
+h4 {
+	@include h4;
+}
+h5 {
+	@include h5;
+}
+h6 {
+	@include h6;
+}
+
+.page-title {
+	margin-top: 0;
+}
