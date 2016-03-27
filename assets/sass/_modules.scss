@@ -1,0 +1,184 @@
+// Variables
+// A collection of variables that all files need to access.
+
+// Fonts and typography
+$sans-serif-headings: "Oswald", Verdana, sans-serif;
+$sans-serif: "Open Sans", Verdana, sans-serif;
+$monospace: "Courier New", Courier, "Lucida Sans Typewriter", "Lucida Typewriter", monospace;
+
+// Sizes
+// Set at 16px base size
+// Regular text
+$small: 0.875em;
+$normal: 1em;
+$large: 1.125em;
+
+// Structure
+$line-height: 1.4;
+
+// Colors
+$black:  #222222;
+$gray: #d3d3d3;
+$white: #f8f8ff;
+$brand: #87ceeb;
+$secondary: #add8e6;
+$accent: #00ffff;
+
+// Accessibility and utilities
+@mixin utilities {
+
+	.callout { @include callout; }
+
+	.nolist { @include nolist; }
+
+	.alignleft { @include alignleft; }
+
+	.alignright { @include alignright; }
+
+	.aligncenter { @include aligncenter; }
+
+	.hidden { @include hidden; }
+
+	.visuallyhidden { @include visuallyhidden; }
+
+	.invisible { @include invisible; }
+
+	.clear { @include clearfix; }
+
+}
+
+// Headings
+@mixin h1 {
+	font-family: $sans-serif-headings;
+	font-size: 2em;
+	font-weight: bold;
+	@media only screen and (min-width: 37.5em) {
+		& {
+			font-size: 3em;
+		}
+	}
+}
+@mixin h2 {
+	font-family: $sans-serif-headings;
+	font-size: 1.953em;
+	font-weight: bold;
+	@media only screen and (min-width: 37.5em) {
+		& {
+			font-size: 2.953em;
+		}
+	}
+}
+@mixin h3 {
+	font-family: $sans-serif-headings;
+	font-size: 1.6em;
+	font-weight: 400;
+	@media only screen and (min-width: 37.5em) {
+		& {
+			font-size: 2.6em;
+		}
+	}
+}
+@mixin h4 {
+	font-family: $sans-serif-headings;
+	font-size: 1.563em;
+	font-weight: bold;
+	@media only screen and (min-width: 37.5em) {
+		& {
+			font-size: 2.563em;
+		}
+	}
+}
+@mixin h5 {
+	font-family: $sans-serif-headings;
+	font-size: 1.28em;
+	font-weight: bold;
+	@media only screen and (min-width: 37.5em) {
+		& {
+			font-size: 2.28em;
+		}
+	}
+}
+@mixin h6 {
+	font-family: $sans-serif-headings;
+	font-size: 2.25em;
+	font-weight: bold;
+}
+
+// Alignment
+@mixin alignleft {
+		display: inline;
+		float: left;
+		margin-right: 1.4em;
+}
+@mixin alignright {
+		display: inline;
+		float: right;
+		margin-left: 1.4em;
+}
+@mixin aligncenter {
+		clear: both;
+		display: block;
+		margin: 0 auto;
+}
+
+// Callout
+@mixin callout {
+		border: 1px solid $brand;
+		margin-bottom: 1.4em;
+		padding: 1em;
+		border-radius: 3px;
+}
+
+// Create a ul or ol without bullets or numbers
+@mixin nolist {
+		list-style: none;
+		margin: 0;
+		padding: 0;
+}
+
+// Hide from both screenreaders and browsers: h5bp.com/u
+@mixin hidden {
+	display: none !important;
+	visibility: hidden;
+}
+
+// Hide only visually, but have it available for screenreaders: h5bp.com/v
+@mixin visuallyhidden {
+	border: 0;
+	clip: rect(0 0 0 0);
+	height: 1px;
+	margin: -1px;
+	overflow: hidden;
+	padding: 0;
+	position: absolute;
+	width: 1px;
+
+	// Extends the .visuallyhidden class to allow the element to be focusable
+	// when navigated to via the keyboard: h5bp.com/p
+	&.focusable:active,
+	&.focusable:focus {
+		clip: auto;
+		height: auto;
+		margin: 0;
+		overflow: visible;
+		position: static;
+		width: auto;
+	}
+}
+
+// Hide visually and from screenreaders, but maintain layout
+@mixin invisible {
+	visibility: hidden;
+}
+
+// Clearfix
+@mixin clearfix() {
+	&:before,
+	&:after {
+		content: "";
+		display: table;
+	}
+	&:after {
+		clear: both;
+	}
+}
