@@ -10,11 +10,9 @@
 * [HTML5 Boilerplate](http://html5boilerplate.com/)
 * [HTML5 Bones](http://html5bones.com/)
 * [SASS](http://sass-lang.com/)
-* [CSS Smart Grid](http://dryan.github.io/css-smart-grid/)
 * [Grunt](http://gruntjs.com/)
 
 # TECHNOLOGY COLOPHON
 
-    HTML5, CSS3
-    SASS, CSS Smart Grid, Grunt
-    jQuery
+    HTML, CSS, JS
+    SASS, Grunt
