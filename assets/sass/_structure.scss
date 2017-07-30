@@ -1,32 +1,30 @@
 /* Site structure */
 .header {
-	padding: 1.4em 0;
+	margin-bottom: 6em;
 	width: 100%;
 	@include clearfix;
-	p {
-		margin-bottom: 0;
-	}
+}
+
+.branding {
+	text-align: center;
 }
 
 .main {
-	padding: 1.4em 0 4.2em;
+	margin-bottom: 6em;
 	@include clearfix;
 }
 
 .featured {
-	margin-bottom: 1.4em;
-	padding: 1.4em 0;
+	margin-bottom: 6em;
 }
 
 .signup-form {
 	label {
 		display: block;
-		font-family: $sans-serif-headings;
-		margin-bottom: 0.5em;
 	}
 
 	::placeholder {
-		color: $white;
+		color: $accent;
 	}
 
 	.required {
@@ -36,8 +34,8 @@
 
 	.email {
 		display: inline-block;
-		margin-bottom: 0.5em;
-		margin-right: 0.5em;
+		margin-bottom: 0.25em;
+		margin-right: 0.25em;
 		width: 70%;
 	}
 
@@ -47,7 +45,7 @@
 }
 
 .footer {
-	padding: 1.4em 0 0;
+	margin-bottom: 6em;
 	text-align: center;
 	@include clearfix;
 }
@@ -56,89 +54,5 @@
 .content,
 .info {
 	margin: 0 auto;
-	max-width: 960px;
-}
-
-.site-wrapper,
-.page-content,
-.info > p {
-	width: 100%;
-}
-
-.js .more {
-	display: none;
-	position: static;
-}
-
-.js .more[tabindex="-1"] {
-	outline: 0;
-}
-
-.js .more-open .more {
-	display: block;
-}
-
-.close-toggle {
-	display: none;
-}
-
-.js .close-toggle {
-	display: block;
-}
-
-@media (min-width: 37.5em) {
-	.site-wrapper,
-	.page-content,
-	.info {
-		margin: 0 auto;
-		width: 66%;
-	}
-
-	.wrapper {
-		position: relative;
-		left: 0;
-		transition: .3s right ease-in-out;
-	}
-
-	.js .header,
-	.js .main,
-	.js .footer {
-		position: relative;
-			right: 0;
-		transition: .3s right ease-in-out;
-	}
-
-	.js .more-open .header,
-	.js .more-open .main,
-	.js .more-open .footer {
-		right: 33%;
-	}
-
-	.js .more {
-		background-color: $black;
-		border-left: 1px solid $gray;
-		display: block;
-		position: fixed;
-			top: 0;
-			left: auto;
-			right: -33%;
-		visibility: hidden;
-		overflow: scroll;
-		padding:  2em 1.25em;
-		width: 33%;
-		height: 100%;
-		-webkit-transition: .3s all ease-in-out;
-		-o-transition: .3s all ease-in-out;
-		transition: .3s all ease-in-out;
-	}
-
-	.js .more-open .more {
-		right: 0;
-		display: block;
-		visibility: visible;
-	}
-
-	.js .more-open #page {
-		right: 33%;
-	}
+	max-width: 700px;
 }
