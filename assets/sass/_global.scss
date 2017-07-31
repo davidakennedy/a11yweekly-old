@@ -1,8 +1,8 @@
 hr {
-	background-color: $brand;
+	background-color: $gray;
 	border: 0;
 	height: 1px;
-	margin-bottom: 1.4em;
+	margin-bottom: 1.5em;
 }
 
 /* Code */
@@ -14,14 +14,14 @@ pre {
 table,
 th,
 td {
-	border: 1px solid $brand;
+	border: 1px solid $gray;
 }
 
 table {
 	border-collapse: separate;
 	border-spacing: 0;
 	border-width: 1px 0 0 1px;
-	margin: 0 0 1.4em;
+	margin: 0 0 1.5em;
 	table-layout: fixed; /* Prevents HTML tables from becoming too wide */
 	width: 100%;
 }
@@ -42,7 +42,8 @@ td {
 	border-width: 0 1px 1px 0;
 }
 
-th, td {
+th,
+td {
 	padding: 0.5em;
 }
 
@@ -68,27 +69,24 @@ textarea {
 button,
 input[type="button"],
 input[type="reset"],
-input[type="submit"],
-.more-toggle {
+input[type="submit"] {
 	border: 2px solid $brand;
 	border-radius: 3px;
 	background: $brand;
-	color: $black;
+	color: $white;
 	cursor: pointer; /* Improves usability and consistency of cursor style between image-type 'input' and others */
 	-webkit-appearance: button; /* Corrects inability to style clickable 'input' types in iOS */
-	font-size: $small;
 	line-height: 1;
 	outline: none;
-	padding: .6em 1em .4em;
+	padding: 0.4em 1em;
 }
 
 button:hover,
 input[type="button"]:hover,
 input[type="reset"]:hover,
-input[type="submit"]:hover,
-more-toggle:hover {
-	background: $black;
-	color: $brand;
+input[type="submit"]:hover {
+	background: $white;
+	color: $black;
 }
 
 button:focus,
@@ -99,28 +97,8 @@ input[type="submit"]:focus,
 button:active,
 input[type="button"]:active,
 input[type="reset"]:active,
-input[type="submit"]:active,
-.more-toggle:active {
-	background: $black;
-	color: $brand;
-}
-
-/* Reverse button */
-.more-toggle {
-	background: transparent;
-	color: $brand;
-	text-decoration: none;
-	-webkit-appearance: none;
-}
-
-.more-toggle:hover {
-	background: $brand;
-	color: $black;
-}
-
-.more-toggle:focus,
-.more-toggle:active {
-	background: $brand;
+input[type="submit"]:active {
+	background: $white;
 	color: $black;
 }
 
@@ -149,9 +127,9 @@ input[type="url"],
 input[type="password"],
 input[type="search"],
 textarea {
-	background-color: $black;
-	color: $white;
-	border: 2px solid $brand;
+	background-color: $white;
+	color: $black;
+	border: 2px solid $accent;
 	border-radius: 3px;
 	outline: none;
 }
@@ -162,8 +140,7 @@ input[type="url"]:focus,
 input[type="password"]:focus,
 input[type="search"]:focus,
 textarea:focus {
-	border: 2px solid $secondary;
-	color: $white;
+	border: 2px solid $brand;
 }
 
 input[type="text"],
@@ -189,8 +166,8 @@ cite {
 }
 
 blockquote {
-	padding-left: 1.4em;
-	border-left: 3px solid $brand;
+	padding-left: 1.5em;
+	border-left: 3px solid $accent;
 }
 
 blockquote > p {
@@ -206,34 +183,32 @@ ol {
 
 li ul,
 li ol {
-	margin: 0 1.4em;
+	margin: 0 1.5em;
 }
 
 dl dd {
-	margin-left: 1.4em;
+	margin-left: 1.5em;
 }
 
 dt {
-	font-family: $sans-serif-headings;
+	font-weight: bold;
 }
 
 /* Links */
 a {
-	color: $brand;
+	color: $black;
 	text-decoration: underline;
 }
 
-a:hover {
+a:hover,
+a:focus {
+	color: $brand;
 	text-decoration: none;
 }
 
 a:focus {
-	background-color: $brand;
-	border-radius: 3px;
-	border-bottom: 1px solid $secondary;
-	border-top: 1px solid $secondary;
-	color: $black;
-	outline: none;
+	outline-color: $brand;
+	outline: 1px solid;
 }
 
 /* Better CSS Outline Suppression */
@@ -242,15 +217,8 @@ a:active {
 	outline: none;
 }
 
-.branding a {
-	display: block;
-	text-decoration: none;
-}
-
-.branding a:focus {
-	background-color: transparent;
-	border: none;
-	outline: 1px solid $brand;
+.logo-link {
+	display: inline-block;
 }
 
 .branding img {
@@ -280,14 +248,14 @@ img {
 ::-moz-selection {
 	/* Selected text */
 	background: $brand;
-	color: $black;
+	color: $white;
 	text-shadow: none;
 }
 
 ::selection {
 	/* Selected text */
 	background: $brand;
-	color: $black;
+	color: $white;
 	text-shadow: none;
 }
 
