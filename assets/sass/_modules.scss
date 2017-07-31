@@ -8,9 +8,9 @@ $monospace: "Courier New", Courier, "Lucida Sans Typewriter", "Lucida Typewriter
 // Sizes
 // Set at 16px base size
 // Regular text
-$small: 1em;
+$small: 75%;
 $normal: 1.25em;
-$large: 1.5em;
+$large: 150%;
 
 // Structure
 $line-height: 1.5;
@@ -29,6 +29,8 @@ $accent: #767676;
 	.callout { @include callout; }
 
 	.nolist { @include nolist; }
+
+	.intro { @include intro; }
 
 	.alignleft { @include alignleft; }
 
@@ -100,6 +102,11 @@ $accent: #767676;
 		list-style: none;
 		margin: 0;
 		padding: 0;
+}
+
+// Create text with big type
+@mixin intro {
+	font-size: $large;
 }
 
 // Hide from both screenreaders and browsers: h5bp.com/u
