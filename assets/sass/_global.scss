@@ -85,8 +85,8 @@ button:hover,
 input[type="button"]:hover,
 input[type="reset"]:hover,
 input[type="submit"]:hover {
-	background: $white;
-	color: $black;
+	background: $secondary;
+	border-color: $secondary;
 }
 
 button:focus,
@@ -98,8 +98,8 @@ button:active,
 input[type="button"]:active,
 input[type="reset"]:active,
 input[type="submit"]:active {
-	background: $white;
-	color: $black;
+	background: $secondary;
+	border-color: $secondary;
 }
 
 input[type="checkbox"],
